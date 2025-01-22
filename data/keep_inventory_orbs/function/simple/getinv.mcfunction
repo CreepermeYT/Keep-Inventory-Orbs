@@ -94,7 +94,13 @@ execute at @n[tag=kio.broken] run particle minecraft:soul_fire_flame ~ ~ ~ 0 0 0
 execute at @n[tag=kio.broken] run setblock ~ ~ ~ air destroy
 
 kill @n[tag=kio.broken_helper]
-data modify entity @n[tag=kio.broken] CustomName set value '"kio:stats_store"'
+
+#limit stats to 512
+execute store result score t kio.newDeath run execute if entity @e[tag=kio.stats]
+execute if score t kio.newDeath matches 512.. run kill @e[tag=kio.stats,limit=1]
+scoreboard players reset t kio.newDeath
+
+data modify entity @n[tag=kio.broken] CustomName set value '"kio:stats"'
 tag @n[tag=kio.broken] add kio.stats
 tag @n[tag=kio.broken] remove kio.savedinv
 tag @n[tag=kio.broken] remove kio.broken

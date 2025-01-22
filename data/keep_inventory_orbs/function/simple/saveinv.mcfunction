@@ -1,5 +1,6 @@
 execute align xyz positioned ~.5 ~ ~.5 run summon minecraft:marker ~ ~ ~ {Tags:["kio.savedinv","kio.saving"],CustomName:'"kio:savedinventory"'}
-execute as @n[tag=kio.saving] at @s run function keep_inventory_orbs:utils/go_up
+execute as @n[tag=kio.saving] at @s unless function keep_inventory_orbs:utils/go_up run kill @s
+execute unless entity @n[tag=kio.saving] run return 0
 execute at @n[tag=kio.saving] run setblock ~ ~ ~ glass
 execute at @n[tag=kio.saving] run function keep_inventory_orbs:utils/breakglass
 data modify entity @n[tag=kio.saving] data.UUID set from entity @s UUID 
