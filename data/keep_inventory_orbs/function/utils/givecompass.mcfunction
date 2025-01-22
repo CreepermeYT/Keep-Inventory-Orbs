@@ -1,0 +1,1 @@
+$give @s minecraft:compass[minecraft:lodestone_tracker={tracked:false,target:{pos:$(Pos),dimension:"$(Dimension)"}},minecraft:custom_data={kioclear:1}]
