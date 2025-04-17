@@ -15,6 +15,6 @@
     ]
   ],
   "rewards": {
-    "function": "keep_inventory_orbs:clickdetection/click"
+    "function": "keep_inventory_orbs:utils/click"
   }
 }

@@ -1,5 +1,8 @@
-execute unless entity @n[tag=kio.broken] run tag @n[tag=kio.savedinv] add kio.broken
+execute unless entity @n[tag=kio.broken] run tag @n[tag=kio.interactionorb] add kio.broken
 execute unless entity @n[tag=kio.broken] run return 0
+execute at @n[tag=kio.broken] run tag @n[tag=kio.interactionorb] add kio.breaking
+execute at @n[tag=kio.broken] run tag @n[tag=kio.displayorb] add kio.breaking
+
 execute at @n[tag=kio.broken] run summon armor_stand ~ ~ ~ {Invisible:1b,Silent:1b,Tags:["kio.broken_helper"]}
 
 clear @s *[minecraft:custom_data={kioclear:1}]
@@ -90,17 +93,19 @@ function keep_inventory_orbs:utils/setitem {slot:103,place:armor,rslot:head}
 function keep_inventory_orbs:utils/setlevels with entity @n[tag=kio.broken] data
 
 execute at @n[tag=kio.broken] run playsound minecraft:block.trial_spawner.ominous_activate block @a[distance=..5.5] ~ ~ ~
+execute at @n[tag=kio.broken] run playsound minecraft:block.glass.break block @a[distance=..5.5] ~ ~ ~ 1 0.8
 execute at @n[tag=kio.broken] run particle minecraft:soul_fire_flame ~ ~ ~ 0 0 0 0.4 50 normal
-execute at @n[tag=kio.broken] run setblock ~ ~ ~ air destroy
 
 kill @n[tag=kio.broken_helper]
 
 #limit stats to 512
-execute store result score t kio.newDeath run execute if entity @e[tag=kio.stats]
-execute if score t kio.newDeath matches 512.. run kill @e[tag=kio.stats,limit=1]
-scoreboard players reset t kio.newDeath
+#execute store result score t kio.newDeath run execute if entity @e[tag=kio.stats]
+#execute if score t kio.newDeath matches 512.. run kill @e[tag=kio.stats,limit=1]
+#scoreboard players reset t kio.newDeath
 
-data modify entity @n[tag=kio.broken] CustomName set value '"kio:stats"'
-tag @n[tag=kio.broken] add kio.stats
-tag @n[tag=kio.broken] remove kio.savedinv
-tag @n[tag=kio.broken] remove kio.broken
+#data modify entity @n[tag=kio.broken] CustomName set value '"kio:stats"'
+#tag @n[tag=kio.broken] add kio.stats
+#tag @n[tag=kio.broken] remove kio.savedinv
+#tag @n[tag=kio.broken] remove kio.broken
+kill @e[tag=kio.breaking]
+kill @e[tag=kio.broken]

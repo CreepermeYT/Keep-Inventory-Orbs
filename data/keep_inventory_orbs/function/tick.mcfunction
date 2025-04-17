@@ -1,11 +1,8 @@
 ## detect deaths and save inv
-#execute as @a[scores={kio.newDeath=1..}] run function keep_inventory_orbs:newdeath
+execute as @a[scores={kio.newDeath=1..}] run function keep_inventory_orbs:utils/newdeath
 
 ## fall detection
-function keep_inventory_orbs:basic/falldetection
-
-## if it is broken
-#execute as @e[tag=kio.savedinv,tag=!kio.falling] at @s unless block ~ ~ ~ glass run function keep_inventory_orbs:broken with entity @s data
+function keep_inventory_orbs:utils/falldetection
 
 ## particles
 execute at @e[tag=kio.interactionorb] run particle minecraft:sculk_soul ~ ~.2 ~ 0.1 0 0.1 0 1 normal
