@@ -1,0 +1,1 @@
+$execute if data storage keep_inventory_orbs:orbs list[{UUID:$(UUID)}] run tag @s add kio.validcompass

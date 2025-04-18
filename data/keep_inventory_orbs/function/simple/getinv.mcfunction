@@ -3,9 +3,9 @@ execute unless entity @n[tag=kio.broken] run return 0
 execute at @n[tag=kio.broken] run tag @n[tag=kio.interactionorb] add kio.breaking
 execute at @n[tag=kio.broken] run tag @n[tag=kio.displayorb] add kio.breaking
 
-execute at @n[tag=kio.broken] run summon armor_stand ~ ~ ~ {Invisible:1b,Silent:1b,Tags:["kio.broken_helper"]}
+function keep_inventory_orbs:utils/clearcompass with entity @n[tag=kio.broken] data 
 
-clear @s *[minecraft:custom_data={kioclear:1}]
+execute at @n[tag=kio.broken] run summon armor_stand ~ ~ ~ {Invisible:1b,Silent:1b,Tags:["kio.broken_helper"]}
 
 function keep_inventory_orbs:utils/setitem {slot:0,place:hotbar,rslot:0}
 

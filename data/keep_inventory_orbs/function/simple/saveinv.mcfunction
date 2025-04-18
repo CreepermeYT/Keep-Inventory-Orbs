@@ -9,6 +9,8 @@ data modify entity @n[tag=kio.nodata] data.Dimension set from entity @s Dimensio
 execute store result entity @n[tag=kio.nodata] data.day int 1 run time query day
 execute store result entity @n[tag=kio.nodata] data.daytime int 1 run time query daytime
 execute store result entity @n[tag=kio.nodata] data.XpP int 1 run xp query @s points
+data modify storage keep_inventory_orbs:orbs list prepend value {UUID:0}
+data modify storage keep_inventory_orbs:orbs list[0].UUID set from entity @n[tag=kio.nodata] UUID
 clear @s
 loot give @s loot keep_inventory_orbs:playerhead
 data modify entity @n[tag=kio.nodata] data.name set from entity @s Inventory[0].components."minecraft:profile".name
