@@ -92,8 +92,8 @@ function keep_inventory_orbs:utils/setitem {slot:103,place:armor,rslot:head}
 
 function keep_inventory_orbs:utils/setlevels with entity @n[tag=kio.broken] data
 
-execute at @n[tag=kio.broken] run playsound minecraft:block.trial_spawner.ominous_activate block @a[distance=..5.5] ~ ~ ~
-execute at @n[tag=kio.broken] run playsound minecraft:block.glass.break block @a[distance=..5.5] ~ ~ ~ 1 0.8
+execute at @n[tag=kio.broken] run playsound minecraft:block.trial_spawner.ominous_activate block @a[distance=..8] ~ ~ ~ 1 0.9
+execute at @n[tag=kio.broken] run playsound minecraft:block.glass.break block @a[distance=..8] ~ ~ ~ 1 0.8
 execute at @n[tag=kio.broken] run particle minecraft:soul_fire_flame ~ ~ ~ 0 0 0 0.4 50 normal
 
 kill @n[tag=kio.broken_helper]
