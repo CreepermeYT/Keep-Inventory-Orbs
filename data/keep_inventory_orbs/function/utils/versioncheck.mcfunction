@@ -1,0 +1,2 @@
+execute unless function keep_inventory_orbs:menu/1.21/menu run scoreboard players set v kio.newDeath 1210
+execute unless function keep_inventory_orbs:menu/1.21.5/menu run scoreboard players set v kio.newDeath 1215
