@@ -28,7 +28,7 @@ execute as @e[tag=kio.falling] at @s run tp @s @n[tag=kio.fallagent,dy=-32]
 ## rising
 
 # rise if collision with existing orbs or inside a block
-execute as @e[tag=kio.interactionorb,tag=!kio.falling,tag=!kio.rising] at @s unless block ~ ~ ~ #air run tag @s add kio.rising
+execute as @e[tag=kio.interactionorb,tag=!kio.falling,tag=!kio.rising] at @s unless function keep_inventory_orbs:utils/validair run tag @s add kio.rising
 execute as @e[tag=kio.interactionorb,tag=!kio.falling,tag=!kio.rising] at @s unless function keep_inventory_orbs:utils/isalone run tag @n[tag=kio.interactionorb] add kio.rising
 execute as @e[tag=kio.rising] at @s run tp @s ~ ~0.1 ~
 execute as @e[tag=kio.rising] at @s if block ~ ~ ~ #air if function keep_inventory_orbs:utils/isalone run tag @s add kio.stoprising
