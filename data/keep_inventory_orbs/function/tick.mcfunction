@@ -10,3 +10,6 @@ execute at @e[tag=kio.interactionorb] run particle minecraft:soul_fire_flame ~ ~
 
 ## visible particles
 execute as @a[tag=kio.visible] at @s run function keep_inventory_orbs:utils/visible
+
+## update OldDatapackFormat tags to New
+function keep_inventory_orbs:utils/updatetags
