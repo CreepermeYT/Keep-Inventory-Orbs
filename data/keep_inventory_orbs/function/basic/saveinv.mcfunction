@@ -14,6 +14,7 @@ data modify storage keep_inventory_orbs:orbs list[0].UUID set from entity @n[tag
 clear @s
 loot give @s loot keep_inventory_orbs:playerhead
 data modify entity @n[tag=kio.nodata] data.name set from entity @s Inventory[0].components."minecraft:profile".name
+execute as @n[tag=kio.nodata] run function keep_inventory_orbs:utils/setorbname with entity @n[tag=kio.nodata] data
 clear @s
 xp set @s 0 levels
 xp set @s 0 points
