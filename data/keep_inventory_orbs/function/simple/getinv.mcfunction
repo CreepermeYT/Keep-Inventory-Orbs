@@ -1,5 +1,5 @@
-execute unless entity @n[tag=kio.broken] run tag @n[tag=kio.interactionorb] add kio.broken
 execute unless entity @n[tag=kio.broken] run return 0
+
 execute at @n[tag=kio.broken] run tag @n[tag=kio.interactionorb] add kio.breaking
 execute at @n[tag=kio.broken] run tag @n[tag=kio.displayorb] add kio.breaking
 
@@ -99,13 +99,13 @@ execute at @n[tag=kio.broken] run particle minecraft:soul_fire_flame ~ ~ ~ 0 0 0
 kill @n[tag=kio.broken_helper]
 
 #limit stats to 512
-#execute store result score t kio.newDeath run execute if entity @e[tag=kio.stats]
-#execute if score t kio.newDeath matches 512.. run kill @e[tag=kio.stats,limit=1]
+execute store result score t kio.newDeath run execute if entity @e[tag=kio.data]
+execute if score t kio.newDeath matches 512.. run kill @e[tag=kio.stats,limit=1]
 #scoreboard players reset t kio.newDeath
 
-#data modify entity @n[tag=kio.broken] CustomName set value '"kio:stats"'
-#tag @n[tag=kio.broken] add kio.stats
-#tag @n[tag=kio.broken] remove kio.savedinv
-#tag @n[tag=kio.broken] remove kio.broken
+tag @n[tag=kio.broken] remove kio.markerorb
+tag @n[tag=kio.broken] remove kio.orb
+tag @n[tag=kio.broken] add kio.stats
+tag @n[tag=kio.broken] remove kio.broken
+
 kill @e[tag=kio.breaking]
-kill @e[tag=kio.broken]
