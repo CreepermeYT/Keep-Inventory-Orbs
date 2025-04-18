@@ -18,4 +18,5 @@ clear @s
 xp set @s 0 levels
 xp set @s 0 points
 function keep_inventory_orbs:utils/givecompass with entity @n[tag=kio.nodata] data
+execute at @s run playsound minecraft:block.respawn_anchor.deplete block @a[distance=..5.5] ~ ~ ~ 1 0.8
 tag @n[tag=kio.nodata] remove kio.nodata
