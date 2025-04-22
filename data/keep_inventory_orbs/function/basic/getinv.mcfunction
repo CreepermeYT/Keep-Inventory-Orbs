@@ -5,7 +5,7 @@ execute at @n[tag=kio.broken] run tag @n[tag=kio.displayorb] add kio.breaking
 
 function keep_inventory_orbs:utils/clearcompass with entity @n[tag=kio.broken] data 
 
-execute at @n[tag=kio.broken] run summon armor_stand ~ ~ ~ {Invisible:1b,Silent:1b,Tags:["kio.broken_helper"]}
+execute at @n[tag=kio.broken] run summon item ~ ~ ~ {Item:{id:"minecraft:dirt"},Tags:["kio.broken_helper"]}
 
 function keep_inventory_orbs:utils/setitem {slot:0,place:hotbar,rslot:0}
 
