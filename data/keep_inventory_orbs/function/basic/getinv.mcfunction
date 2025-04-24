@@ -101,7 +101,7 @@ kill @n[tag=kio.broken_helper]
 #limit stats to 512
 execute store result score t kio.newDeath run execute if entity @e[tag=kio.data]
 execute if score t kio.newDeath matches 512.. run kill @e[tag=kio.stats,limit=1]
-#scoreboard players reset t kio.newDeath
+scoreboard players reset t kio.newDeath
 
 tag @n[tag=kio.broken] remove kio.markerorb
 tag @n[tag=kio.broken] remove kio.orb

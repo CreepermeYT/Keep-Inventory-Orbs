@@ -9,6 +9,7 @@ data modify entity @n[tag=kio.nodata] data.Dimension set from entity @s Dimensio
 execute store result entity @n[tag=kio.nodata] data.day int 1 run time query day
 execute store result entity @n[tag=kio.nodata] data.daytime int 1 run time query daytime
 execute store result entity @n[tag=kio.nodata] data.XpP int 1 run xp query @s points
+execute if score v kio.newDeath matches 1215.. run function keep_inventory_orbs:utils/1_21_5equipment
 data modify storage keep_inventory_orbs:orbs list prepend value {UUID:0}
 data modify storage keep_inventory_orbs:orbs list[0].UUID set from entity @n[tag=kio.nodata] UUID
 clear @s
