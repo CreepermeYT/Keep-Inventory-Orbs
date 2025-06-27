@@ -1,3 +1,6 @@
+## do menus
+execute if score v kio.newDeath matches 1216 as @a[scores={kio.menus=1..}] at @s run function keep_inventory_orbs:menu/openmenus
+
 ## detect deaths and save inv
 execute as @a[scores={kio.newDeath=1..}] run function keep_inventory_orbs:utils/newdeath
 
