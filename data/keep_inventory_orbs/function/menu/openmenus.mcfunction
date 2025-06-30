@@ -1,5 +1,3 @@
-scoreboard objectives setdisplay sidebar kio.menus
-
 # 1 -> execute if score @s kio.menus matches 1 run function keep_inventory_orbs:menu/getmynearest
 
 execute if score @s kio.menus matches 1 run function keep_inventory_orbs:menu/getmynearest
