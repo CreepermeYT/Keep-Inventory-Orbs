@@ -5,14 +5,26 @@
                 "supported_formats": { "min_inclusive": 48, "max_inclusive": 100 },
         "min_format": 48,
         "max_format": 100
-        
 	},
   "overlays": {
     "entries": [
       {
+        "directory": "newtxtft",
+        "formats": {
+          "min_inclusive": 71,
+          "max_inclusive": 100
+        },
+        "min_format": 71,
+        "max_format": 100
+      },
+      {
         "directory": "newgr",
         "min_format": 94.1,
-        "max_format": 100
+        "max_format": 100,
+        "formats": {
+          "min_inclusive": 94.1,
+          "max_inclusive": 100
+        }
       }
     ]
   }
