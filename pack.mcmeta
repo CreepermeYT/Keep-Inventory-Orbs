@@ -2,6 +2,18 @@
 	"pack": {
 		"description": "Adds Orbs to Keep your Inventory safe",
 		"pack_format": 48,
-                "supported_formats": { "min_inclusive": 48, "max_inclusive": 81 }
-	}
+                "supported_formats": { "min_inclusive": 48, "max_inclusive": 100 },
+        "min_format": 48,
+        "max_format": 100
+        
+	},
+  "overlays": {
+    "entries": [
+      {
+        "directory": "newgr",
+        "min_format": 94.1,
+        "max_format": 100
+      }
+    ]
+  }
 }
