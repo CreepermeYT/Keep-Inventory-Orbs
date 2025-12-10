@@ -19,7 +19,7 @@ execute as @n[tag=kio.nodata] run function keep_inventory_orbs:utils/setorbname 
 item replace entity @s hotbar.0 with air
 xp set @s 0 levels
 xp set @s 0 points
-function keep_inventory_orbs:utils/givecompass with entity @n[tag=kio.nodata] data
+execute if score c kio.newDeath matches 1 run function keep_inventory_orbs:utils/givecompass with entity @n[tag=kio.nodata] data
 execute at @s run playsound minecraft:block.respawn_anchor.deplete block @a[distance=..8] ~ ~ ~ 1 0.75
 execute as @n[tag=kio.nodata] on vehicle on vehicle run function keep_inventory_orbs:utils/voidcheck
 tag @n[tag=kio.nodata] remove kio.nodata

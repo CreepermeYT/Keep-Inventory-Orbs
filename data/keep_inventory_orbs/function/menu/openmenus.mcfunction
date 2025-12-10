@@ -6,6 +6,7 @@ execute if score @s kio.menus matches 3 run function keep_inventory_orbs:menu/to
 execute if score @s kio.menus matches 4 run function keep_inventory_orbs:menu/getstats
 execute if score @s kio.menus matches 5 run function keep_inventory_orbs:menu/togglevisible
 execute if score @s kio.menus matches 6 run function keep_inventory_orbs:menu/clearallstats
+execute if score @s kio.menus matches 8 run function keep_inventory_orbs:menu/togglecompass
 
 execute if score @s kio.menus matches 7 run function keep_inventory_orbs:.menu
 
