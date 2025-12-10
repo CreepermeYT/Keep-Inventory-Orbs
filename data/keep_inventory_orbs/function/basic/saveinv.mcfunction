@@ -12,11 +12,11 @@ execute store result entity @n[tag=kio.nodata] data.XpP int 1 run xp query @s po
 execute if score v kio.newDeath matches 1215.. run function keep_inventory_orbs:utils/1_21_5equipment
 data modify storage keep_inventory_orbs:orbs list prepend value {UUID:0}
 data modify storage keep_inventory_orbs:orbs list[0].UUID set from entity @n[tag=kio.nodata] UUID
-clear @s
+function keep_inventory_orbs:utils/safeclear
 loot give @s loot keep_inventory_orbs:playerhead
 data modify entity @n[tag=kio.nodata] data.name set from entity @s Inventory[0].components."minecraft:profile".name
 execute as @n[tag=kio.nodata] run function keep_inventory_orbs:utils/setorbname with entity @n[tag=kio.nodata] data
-clear @s
+item replace entity @s hotbar.0 with air
 xp set @s 0 levels
 xp set @s 0 points
 function keep_inventory_orbs:utils/givecompass with entity @n[tag=kio.nodata] data
