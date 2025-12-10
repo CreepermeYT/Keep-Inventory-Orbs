@@ -1,0 +1,1 @@
+scoreboard players set v kio.newDeath 1215

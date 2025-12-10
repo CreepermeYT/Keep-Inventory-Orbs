@@ -18,6 +18,15 @@
         "max_format": 100
       },
       {
+        "directory": "v1216",
+        "formats": {
+          "min_inclusive": 80,
+          "max_inclusive": 100
+        },
+        "min_format": 80,
+        "max_format": 100
+      },
+      {
         "directory": "newgr",
         "min_format": 94.1,
         "max_format": 100,
