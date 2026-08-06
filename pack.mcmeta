@@ -46,6 +46,15 @@
           "min_inclusive": 100,
           "max_inclusive": 110
         }
+      },
+      {
+        "directory": "newadv",
+        "min_format": 105,
+        "max_format": 110,
+        "formats": {
+          "min_inclusive": 105,
+          "max_inclusive": 110
+        }
       }
     ]
   }
