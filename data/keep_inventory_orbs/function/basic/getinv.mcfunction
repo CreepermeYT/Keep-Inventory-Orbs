@@ -98,9 +98,9 @@ execute at @n[tag=kio.broken] run particle minecraft:soul_fire_flame ~ ~ ~ 0 0 0
 
 kill @n[tag=kio.broken_helper]
 
-#limit stats to 512
+#limit stats to 1024
 execute store result score t kio.newDeath run execute if entity @e[tag=kio.data]
-execute if score t kio.newDeath matches 512.. run kill @e[tag=kio.stats,limit=1]
+execute if score t kio.newDeath matches 1024.. run kill @e[tag=kio.stats,limit=1]
 scoreboard players reset t kio.newDeath
 
 tag @n[tag=kio.broken] remove kio.markerorb
