@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "changed_dimension": {
+      "trigger": "minecraft:changed_dimension"
+    }
+  },
+  "rewards": {
+    "function": "keep_inventory_orbs:utils/initializedimension"
+  }
+}
