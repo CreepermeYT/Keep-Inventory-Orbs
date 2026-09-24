@@ -1,3 +1,6 @@
+## handle forceloads
+function keep_inventory_orbs:utils/handleforceloads with storage keep_inventory_orbs:orbs forceloads[0]
+
 ## do menus
 execute if score v kio.newDeath matches 1216 as @a[scores={kio.menus=1..}] at @s run function keep_inventory_orbs:menu/openmenus
 
