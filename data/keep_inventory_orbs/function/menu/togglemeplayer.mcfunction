@@ -4,5 +4,5 @@ tag @s[tag=kio.notme] remove kio.me
 tag @s[tag=kio.notme] remove kio.notme
 
 function keep_inventory_orbs:menu/menu
-tellraw @s[tag=kio.me] [{"text":"-> ","bold":true},"TOGGLED",{"text":" OPERATOR TO ","color":"gray"},"ME"]
-tellraw @s[tag=!kio.me] [{"text":"-> ","bold":true},"TOGGLED",{"text":" OPERATOR TO ","color":"gray"},"<PLAYER>"]
+tellraw @s[tag=kio.me] [{"text":"-> ","bold":true},{"text":"TOGGLED","color":"gold"}," OPERATOR",{"text":" TO ","color":"gray"},"ME"]
+tellraw @s[tag=!kio.me] [{"text":"-> ","bold":true},{"text":"TOGGLED","color":"gold"}," OPERATOR",{"text":" TO ","color":"gray"},"<PLAYER>"]
