@@ -1,0 +1,24 @@
+{
+  "criteria": {
+    "click": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:interaction"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "click"
+    ]
+  ],
+  "rewards": {
+    "function": "keep_inventory_orbs:utils/click"
+  }
+}

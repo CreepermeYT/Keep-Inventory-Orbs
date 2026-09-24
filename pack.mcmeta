@@ -4,10 +4,10 @@
 		"pack_format": 48,
                 "supported_formats": { 
                   "min_inclusive": 48, 
-                  "max_inclusive": 110
+                  "max_inclusive": 121
                 },
         "min_format": 48,
-        "max_format": 110
+        "max_format": 121
 	},
   "overlays": {
     "entries": [
@@ -15,45 +15,54 @@
         "directory": "newtxtft",
         "formats": {
           "min_inclusive": 71,
-          "max_inclusive": 110
+          "max_inclusive": 121
         },
         "min_format": 71,
-        "max_format": 110
+        "max_format": 121
       },
       {
         "directory": "v1216",
         "formats": {
           "min_inclusive": 80,
-          "max_inclusive": 110
+          "max_inclusive": 121
         },
         "min_format": 80,
-        "max_format": 110
+        "max_format": 121
       },
       {
         "directory": "newgr",
         "min_format": 94.1,
-        "max_format": 110,
+        "max_format": 121,
         "formats": {
           "min_inclusive": 94.1,
-          "max_inclusive": 110
+          "max_inclusive": 121
         }
       },
       {
         "directory": "newtime",
         "min_format": 100,
-        "max_format": 110,
+        "max_format": 121,
         "formats": {
           "min_inclusive": 100,
-          "max_inclusive": 110
+          "max_inclusive": 121
         }
       },
       {
         "directory": "newadv",
         "min_format": 105,
-        "max_format": 110,
+        "max_format": 120,
         "formats": {
           "min_inclusive": 105,
-          "max_inclusive": 110
+          "max_inclusive": 120
+        }
+      },
+      {
+        "directory": "neweradv",
+        "min_format": 121,
+        "max_format": 121,
+        "formats": {
+          "min_inclusive": 121,
+          "max_inclusive": 121
         }
       }
     ]
